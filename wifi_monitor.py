@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 # Set the log level to LOG_LEVEL
 logger.setLevel(LOG_LEVEL)
 # Make a handler that writes to a file, making a new file at midnight and keeping 3 backups
-handler = logging.handlers.TimedRotatingFileHandler('/tmp/wifi_monitor.log', when="midnight", backupCount=3)
+handler = logging.handlers.TimedRotatingFileHandler('/home/pi/wifimonitor/wifi_monitor.log', when="midnight", backupCount=3)
 # Format each log message like this
 formatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
 # Attach the formatter to the handler
